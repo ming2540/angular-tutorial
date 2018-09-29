@@ -6,5 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-app';
+  public title = 'My First Angular App';
+  public count: number = 0;
+
+  constructor(){
+    setInterval(()=>{
+      this.count++;
+    },1000)
+  }
+
+  getDate():string {
+    let now = new Date();
+
+    return now.toISOString();
+  }
+
 }
